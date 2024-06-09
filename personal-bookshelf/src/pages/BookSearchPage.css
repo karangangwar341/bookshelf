@@ -1,0 +1,31 @@
+.search-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    height: 100vh; /* Full height to align items from the top */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  
+  .search-page h1 {
+    margin-bottom: 20px;
+  }
+  
+  .book-results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .bookshelf-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  

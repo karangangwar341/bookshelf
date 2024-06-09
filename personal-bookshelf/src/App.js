@@ -1,0 +1,56 @@
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
+import BookSearchPage from './pages/BookSearchPage';
+import BookshelfPage from './pages/BookshelfPage';
+import './index.css';
+
+const Navbar = () => {
+  const location = useLocation();
+
+  return (
+    <nav className="navbar absolute right-0 m-4 ">
+      {location.pathname === '/' ? (
+        <Link to="/bookshelf" className="nav-button">My Bookshelf</Link>
+      ) : (
+        <Link to="/" className="nav-button">Search Books</Link>
+      )}
+    </nav>
+  );
+};
+
+const App = () => {
+  const [bookshelf, setBookshelf] = useState([]);
+
+  useEffect(() => {
+    const storedBookshelf = JSON.parse(localStorage.getItem('bookshelf'));
+    if (storedBookshelf) {
+      setBookshelf(storedBookshelf);
+    }
+  }, []);
+
+  const addToBookshelf = (book) => {
+    const newBookshelf = [...bookshelf, book];
+    setBookshelf(newBookshelf);
+    localStorage.setItem('bookshelf', JSON.stringify(newBookshelf));
+  };
+
+  return (
+    <Router>
+      <Navbar />
+      <div className="app">
+        <Routes>
+          <Route
+            path="/"
+            element={<BookSearchPage addToBookshelf={addToBookshelf} bookshelf={bookshelf} />}
+          />
+          <Route
+            path="/bookshelf"
+            element={<BookshelfPage bookshelf={bookshelf} />}
+          />
+        </Routes>
+      </div>
+    </Router>
+  );
+};
+
+export default App;

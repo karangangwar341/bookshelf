@@ -1,0 +1,32 @@
+.book-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 200px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .book-card h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .book-card p {
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+  
+  .book-card button {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .book-card button.added {
+    background-color: gray;
+    cursor: not-allowed;
+  }
+  
