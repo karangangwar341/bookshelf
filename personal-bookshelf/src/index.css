@@ -22,15 +22,6 @@ code {
   border-bottom: 1px solid #ddd;
 } */
 
-.nav-button {
-  padding: 7px 20px;
-  background-color: green;
-  color: white;
-  text-decoration: none;
-  border-radius: 20px;
-  font-size: 1em;
-}
 
-.nav-button:hover {
-  background-color: darkgreen;
-}
+
+

@@ -3,20 +3,40 @@ import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react
 import BookSearchPage from './pages/BookSearchPage';
 import BookshelfPage from './pages/BookshelfPage';
 import './index.css';
+import { FaSearch, FaBook } from 'react-icons/fa';
 
 const Navbar = () => {
   const location = useLocation();
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   return (
-    <nav className="navbar absolute right-0 m-4 ">
+    <nav className="navbar absolute right-0 m-4">
       {location.pathname === '/' ? (
-        <Link to="/bookshelf" className="nav-button">My Bookshelf</Link>
+        <Link to="/bookshelf" className="nav-button md:bg-green-400 md:hover:bg-green-600 p-2 rounded-xl w-16 text-nowrap">
+          {isMobile ? <FaBook /> : 'My Bookshelf'}
+        </Link>
       ) : (
-        <Link to="/" className="nav-button">Search Books</Link>
+        <Link to="/" className="nav-button">
+          {isMobile ? <FaSearch /> : 'Search Books'}
+        </Link>
       )}
     </nav>
   );
 };
+
+
 
 const App = () => {
   const [bookshelf, setBookshelf] = useState([]);
