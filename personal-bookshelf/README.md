@@ -1,70 +1,99 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Personal Bookshelf
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+Personal Bookshelf is a React application that allows users to search for books using the Open Library API and maintain a personal bookshelf in their browser using localStorage. The app has two main pages: a search page for finding books and a bookshelf page to view the books you have added to your personal collection.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Book Search**: Search for books in real-time using the Open Library API.
+- **Add to Bookshelf**: Add books to your personal bookshelf.
+- **My Bookshelf**: View and manage your personal collection of books.
+- **Persistent Storage**: Your bookshelf is stored in the browser using localStorage, so it remains even after you refresh the page.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Demo
 
-### `npm test`
+You can access the live demo of the project [here](https://bookshelf-phi-one.vercel.app/).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+To run this project locally, follow these steps:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Node.js (https://nodejs.org)
+- npm (Node package manager, which comes with Node.js)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Steps
 
-### `npm run eject`
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/your-username/personal-bookshelf.git
+    cd personal-bookshelf
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Install the dependencies**:
+    ```bash
+    npm install
+    ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. **Start the development server**:
+    ```bash
+    npm start
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. Open your browser and navigate to `http://localhost:3000`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Project Structure
 
-## Learn More
+- `src/`: Contains all the source code for the project.
+  - `components/`: Reusable React components.
+  - `pages/`: Page components for different routes.
+  - `App.js`: Main application component.
+  - `index.js`: Entry point of the application.
+- `public/`: Contains the static assets for the project.
+- `package.json`: Project metadata and dependencies.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## How to Use
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Search for Books
 
-### Code Splitting
+1. **Navigate to the Search Page**:
+    - By default, the app opens on the search page.
+    - Alternatively, click "Search Books" from the navigation bar.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. **Search for a Book**:
+    - Type the name of the book in the search bar.
+    - Results will appear in real-time as you type.
 
-### Analyzing the Bundle Size
+3. **Add a Book to Your Bookshelf**:
+    - Click the "Add to Bookshelf" button on the book card.
+    - The button will be disabled once the book is added.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### View Your Bookshelf
 
-### Making a Progressive Web App
+1. **Navigate to the Bookshelf Page**:
+    - Click "My Bookshelf" from the navigation bar.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+2. **View Your Collection**:
+    - All the books you have added will be displayed here.
 
-### Advanced Configuration
+## Technologies Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- React
+- Tailwind CSS
+- Axios (for API requests)
+- Open Library API
 
-### Deployment
+## Contribution
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+If you want to contribute to this project, feel free to fork the repository and submit a pull request. Any contributions are welcome!
 
-### `npm run build` fails to minify
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+If you have any questions or suggestions, feel free to contact me at karangangwar341@gmail.com.
